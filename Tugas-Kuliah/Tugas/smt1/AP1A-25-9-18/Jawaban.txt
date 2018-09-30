@@ -1,0 +1,5 @@
+1. a. Flowchart
+2. a. System Flowchart
+3. a. kounter
+4. c. tidak di perlukan langkah-langkah pengolahan
+5. d. Program flowchart
