@@ -18,9 +18,11 @@ pendTot! = pendTetap + pendKelTot + pendTambahan
 IF pendTot >= 100000 THEN
         PRINT "Anda mendapat kredit Vespa"
         banyakVespa = banyakVespa + 1
-ELSE
+ELSEIF pendTot >= 50000 AND pendTot < 100000 THEN
         PRINT "Anda mendapat kredit Honda"
         banyakHonda = banyakHonda + 1
+ELSE
+        PRINT "Anda tidak berhak memiliki kredit Vespa maupun Honda"
 END IF
 
 tanya:
