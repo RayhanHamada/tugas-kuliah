@@ -1,0 +1,42 @@
+
+DIM banyakVespa AS INTEGER
+DIM banyakHonda AS INTEGER
+
+nambahPemohon:
+
+CLS
+INPUT "Masukkan nilai pendapatan tetap = ", pendTetap!
+INPUT "Masukkan nilai pendapatan tambahan = ", pendTambahan!
+INPUT "Masukkan nilai pendapatan keluarga suami = ", pendKelSuami!
+INPUT "Masukkan nilai pendapatan keluarga istri = ", pendKelIstri!
+
+pendKelTot! = (pendKelSuami + pendKelIstri) / 3!
+pendTambahan = pendTambahan / 2!
+
+pendTot! = pendTetap + pendKelTot + pendTambahan
+
+IF pendTot >= 100000 THEN
+        PRINT "Anda mendapat kredit Vespa"
+        banyakVespa = banyakVespa + 1
+ELSE
+        PRINT "Anda mendapat kredit Honda"
+        banyakHonda = banyakHonda + 1
+END IF
+
+tanya:
+
+INPUT "Apakah anda ingin menambah pemohon ?(y/n) ", jawab$
+
+IF jawab$ = "y" THEN
+        GOTO nambahPemohon
+ELSEIF jawab$ = "n" THEN
+        CLS
+        PRINT "Laporan"
+        PRINT "Jumlah pemohon yang mendapat kredit Vespa"; banyakVespa
+        PRINT "Jumlah pemohon yang mendapat kredit Honda"; banyakHonda
+ELSE
+        CLS
+        PRINT "Jawaban anda tidak valid, silahkan ulangi !"
+        GOTO tanya
+END IF
+
